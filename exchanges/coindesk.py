@@ -1,4 +1,4 @@
-from utils import getresponse
+from util.utils import getresponse
 
 
 def currentprice(currency='USD'):
@@ -7,4 +7,3 @@ def currentprice(currency='USD'):
     price = data['bpi'][currency]['rate_float']
     return float(price)
 
-print(currentprice())
