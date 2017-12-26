@@ -6,3 +6,7 @@ def getresponse(url):
     response.raise_for_status()
     return response.json()
 
+
+def getdata(url):
+    data = getresponse(url)
+    return data
