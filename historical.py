@@ -4,11 +4,18 @@ import matplotlib.dates as md
 import datetime as dt
 import time
 
+start_date = '2017-12-01'
+end_date = ''
+
+API_TOKEN="t7b-qxmVYqfSioA4mnec"
+
 data_sets = [
     ('BCHARTS/LOCALBTCUSD', 'k'),
-    ('BCHARTS/MTGOXUSD', 'g--'),
-    ('BCHARTS/BITBOXUSD', 'r-')
+#    ('BCHARTS/MTGOXUSD', 'g--'),
+#    ('BCHARTS/BITBOXUSD', 'r-')
 ]
+
+quandl.ApiConfig.api_key = API_TOKEN
 
 def get_price(data, price_key='Open'):
     price = data[price_key].tolist()
@@ -20,7 +27,9 @@ def get_price(data, price_key='Open'):
 
 
 for d in data_sets:
-    data = quandl.get(d[0]).dropna()
+    data = quandl.get(d[0],
+                      start_date=start_date,
+                      end_date=end_date).dropna()
     dates, prices = get_price(data)
     plt.plot(dates, prices, d[1], label=d[0])
 
@@ -32,5 +41,5 @@ xfmt = md.DateFormatter('%d-%m-%Y')
 ax.xaxis.set_major_formatter(xfmt)
 plt.legend()
 plt.grid(True)
-plt.yscale('log')
+#plt.yscale('log')
 plt.show()
