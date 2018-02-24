@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as md
 import datetime as dt
 import time
-from tokens import QUANDL_API_TOKEN
+from pybitcoin._secrets.tokens import QUANDL_API_TOKEN
 
 start_date = '2010-01-01'
 end_date = ''

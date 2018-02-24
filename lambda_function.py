@@ -1,6 +1,6 @@
 import os
 from datetime import datetime
-from exchanges.blockchain import currentprice
+from pybitcoin.exchanges.blockchain import currentprice
 
 #SITE = os.environ['site']  # URL of the site to check, stored in the site environment variable
 

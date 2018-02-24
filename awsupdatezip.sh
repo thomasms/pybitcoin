@@ -2,4 +2,4 @@
 
 OUTPUT_ZIP=aws.zip
 
-zip -r ${OUTPUT_ZIP} dependencies exchanges util lambda_function.py
+zip -r ${OUTPUT_ZIP} pybitcoin lambda_function.py

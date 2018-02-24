@@ -1,4 +1,4 @@
-from util.utils import getdata
+from pybitcoin.util.utils import getdata
 
 
 BASE_URL_API='https://blockchain.info/ticker'

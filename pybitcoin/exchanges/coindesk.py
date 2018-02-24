@@ -1,4 +1,4 @@
-from util.utils import getdata
+from pybitcoin.util.utils import getdata
 
 
 BASE_URL_API='https://api.coindesk.com/v1/bpi'
