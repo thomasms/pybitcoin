@@ -2,7 +2,7 @@ from pybitcoin.util.utils import getdata
 
 
 BASE_URL_API='https://blockchain.info/ticker'
-
+NAME = "blockchain"
 
 def currentprice(currency='USD'):
     price = getdata(BASE_URL_API)[currency]['last']

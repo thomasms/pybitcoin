@@ -1,10 +1,12 @@
 import pybitcoin.exchanges.coindesk as cd
 import pybitcoin.exchanges.blockchain as bc
+import pybitcoin.exchanges.bitbay as bb
+import pybitcoin.exchanges.cryptomate as cm
 
-currency='GBP'
+currency='USD'
 
-exchanges = [cd, bc]
+exchanges = [cd, bc, bb, cm]
 
 for e in exchanges:
     print("Exchange: {0} - Price {1} ({2})".
-          format(e, e.currentprice(currency=currency), currency))
+          format(e.NAME, e.currentprice(currency=currency), currency))

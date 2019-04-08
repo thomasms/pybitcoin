@@ -2,7 +2,7 @@ from pybitcoin.util.utils import getdata
 
 
 BASE_URL_API='https://api.coindesk.com/v1/bpi'
-
+NAME = "coindesk"
 
 def currentprice(currency='USD'):
     data = getdata(str.format('{0}/currentprice/{1}.json',
