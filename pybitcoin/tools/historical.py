@@ -5,13 +5,14 @@ import datetime as dt
 import time
 from pybitcoin._secrets.tokens import QUANDL_API_TOKEN
 
-start_date = '2010-01-01'
+start_date = '2014-01-01'
 end_date = ''
 
 data_sets = [
-    ('BCHARTS/LOCALBTCUSD', 'k'),
-    ('BCHARTS/MTGOXUSD', 'g--'),
-    ('BCHARTS/BITBOXUSD', 'r-')
+#    ('BCHARTS/LOCALBTCUSD', 'g-'),
+#    ('BCHARTS/MTGOXUSD', 'b-'),
+    ('BCHARTS/BITBOXUSD', 'r-'),
+    ('BCHARTS/BITSTAMPUSD', 'k')
 ]
 
 quandl.ApiConfig.api_key = QUANDL_API_TOKEN
@@ -39,6 +40,6 @@ ax = plt.gca()
 xfmt = md.DateFormatter('%d-%m-%Y')
 ax.xaxis.set_major_formatter(xfmt)
 plt.legend()
-plt.grid(True)
-plt.yscale('log')
+#plt.grid(True)
+# plt.yscale('log')
 plt.show()
